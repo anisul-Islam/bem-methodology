@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BEM</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- specificity issue: avoid id/tag example starts here -->
+    <!-- <div id="container">
+      <div class="card">
+        <h2>Card title</h2>
+        <p>card description goes here</p>
+        <button>Learn More</button>
+      </div>
+
+      <div>
+        <h2>feedback title</h2>
+        <p>feedback description goes here</p>
+      </div>
+    </div> -->
+    <!-- specificity issue: avoid id/tag example ends here -->
+
+    <!-- CSS class clashes example starts here -->
+    <!-- <div class="container">
+      <div class="card">
+        <h2 class="title">Card title</h2>
+        <p class="text">card description goes here</p>
+        <button class="btn">Learn More</button>
+      </div>
+
+      <div class="feedback">
+        <h2 class="title">feedback title</h2>
+        <p class="text">feedback description goes here</p>
+      </div>
+    </div> -->
+    <!-- CSS class clashes example ends here -->
+
+    <!-- 
+      BEM (Block, Element, Modifier) Methodology 
+      1. solve specificity issue with equal specificity
+      2. No CSS class clashes
+      3. A common rules for classes naming 
+    -->
+
+    <!-- 
+      Block
+      1. block is a meaningful container; 
+      2. we can use letters, digits, dashes for naming block; 
+      3. use dash when more than one word  
+
+      Element
+      1. Element is not directly meaningful but connected to block/container;   
+      2. we can use letters, digits, dashes, underscore for naming element;
+      3. syntax: block__element 
+      4. use dash when more than one word 
+
+      Modifier
+      1. Modifies block or element; (changes in apperance, states)
+      2. we can use letters, digits, dashes, underscore for naming modifiers;
+      3. syntax: block/element--modifier
+      4. use dash when more than one word 
+    -->
+    <div class="container">
+      <div class="card card--large">
+        <h2 class="card__title">Card title</h2>
+        <p class="card__text">card description goes here</p>
+        <button class="btn card__btn card__btn--large">Learn More</button>
+      </div>
+
+      <div class="feedback feedback-medium">
+        <h2 class="feedback__title">feedback title</h2>
+        <p class="feedback__text">feedback description goes here</p>
+        <button class="btn feedback__btn feedback__btn--large">Delete</button>
+      </div>
+
+      <!-- dont go too deeep and make things complex -->
+      <ul class="list">
+        <li class="list__item">Item1</li>
+        <li class="list__item">
+          Item2
+          <!-- <img class="list__item__img" src="#" alt="#" /> -->
+          <img class="list__img" src="#" alt="#" />
+        </li>
+        <li class="list__item">Item3</li>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+/* reset and common codes starts here */
+* {
+  box-sizing: border-box;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+div {
+  padding: 1rem;
+  margin: 1rem 0;
+}
+.btn {
+  border: none;
+  border-radius: 0.6rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+/* reset and common codes starts here */
+
+/* specificity issue: avoid id/tag example starts */
+/* #container h2 {
+  color: brown;
+}
+.card h2 {
+  color: green;
+} */
+/* specificity issue: avoid id/tag example ends */
+
+/* CSS class clashes example starts here*/
+/* .title {
+  color: brown;
+} */
+/* CSS class clashes example ends here*/
+
+/* bem starts here  */
+.card {
+  background-color: bisque;
+}
+.card--large {
+  width: 20rem;
+}
+.card__title {
+  color: brown;
+}
+.card__text {
+}
+.card__btn {
+  background-color: aqua;
+}
+
+.card__btn--large {
+  width: 8rem;
+}
+
+.feedback {
+  background-color: rgb(100, 98, 95);
+}
+.feedback-medium {
+  width: 15rem;
+}
+.feedback__title {
+}
+.feedback__text {
+}
+.feedback__btn {
+  background-color: violet;
+}
+
+/* bem ends here  */
